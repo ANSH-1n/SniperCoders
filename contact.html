@@ -1,0 +1,249 @@
+
+
+
+
+
+
+
+
+ <!DOCTYPE html>
+ <html lang="en">
+ 
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <title>Contact - SniperCoders</title>
+     <link rel="icon" href="images/logo.ico" type="image/x-icon">
+     <link rel="shortcut icon" href="images/logo.ico" type="image/x-icon">
+     <link rel="shortcut icon" href="images/logo.ico" type="image/x-icon">
+ <link rel="shortcut icon" href="images/logo.ico" type="image/x-icon">
+ <link rel="icon" href="images/logo.ico" type="image/x-icon">
+ <link rel="shortcut icon" href="images/logo.ico" type="image/x-icon">
+ <link rel="shortcut icon" href="images/logo.ico" type="image/x-icon">
+<link rel="shortcut icon" href="images/logo.ico" type="image/x-icon">
+     <link rel="icon" href="images/logo.ico" type="image/x-icon">
+     <script src="https://cdn.tailwindcss.com"></script>
+     <link rel="stylesheet" href="style.css">
+     <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+     <style>
+         /* Navbar styles and transitions */
+         .navbar-item {
+             text-decoration: none;
+             color: white;
+             padding: 0.8rem;
+             text-transform: uppercase;
+             transition: all 0.3s ease;
+         }
+ 
+         .navbar-item:hover {
+             color: #facc15;
+             transform: translateY(-3px);
+         }
+ 
+         .navbar-item:active {
+             color: #ea580c;
+         }
+ 
+         /* Vibrant background animation */
+         @keyframes vibrantBackground {
+             0% {
+                 background: #ff7e5f;
+             }
+             25% {
+                 background: #feb47b;
+             }
+             50% {
+                 background: #6a11cb;
+             }
+             75% {
+                 background: #2575fc;
+             }
+             100% {
+                 background: #ff7e5f;
+             }
+         }
+ 
+         body {
+             background: linear-gradient(45deg, #ff7e5f, #feb47b, #6a11cb, #2575fc);
+             background-size: 400% 400%;
+             animation: vibrantBackground 10s ease infinite;
+         }
+ 
+         .fade-in {
+             animation: fadeIn 2s ease-in-out;
+         }
+ 
+         @keyframes fadeIn {
+             0% {
+                 opacity: 0;
+             }
+             100% {
+                 opacity: 1;
+             }
+         }
+ 
+         /* Styles for the mobile menu */
+         #mobileMenu {
+             display: none;
+             position: fixed;
+             top: 0;
+             left: 0;
+             width: 100%;
+             height: 100%;
+             background-color: rgba(0, 0, 0, 0.7);
+             z-index: 1000;
+         }
+ 
+         #mobileMenu .menu-content {
+             display: flex;
+             flex-direction: column;
+             align-items: center;
+             justify-content: center;
+             height: 100%;
+         }
+ 
+         #mobileMenu a {
+             margin: 20px 0;
+             font-size: 2rem;
+             color: white;
+             text-decoration: none;
+         }
+ 
+         #mobileMenu a:hover {
+             color: #ff8c00;
+         }
+ 
+     </style>
+ </head>
+ 
+ <body class="font-sans text-black">
+ 
+     <header class="bg-gray-800 text-white py-4 fixed top-0 w-full z-10">
+         <nav class="container mx-auto flex justify-between items-center">
+             <div class="logo-container flex items-center bg-gray-800 p-2 rounded-full">
+                 <img src="images/logo.png" alt="Logo" class="logo w-12 h-auto mr-2 bg-gray-800 p-2 rounded-full">
+                 <span class="navbar-title text-xl font-bold">SniperCoders</span>
+             </div>
+             <ul class="hidden md:flex space-x-6">
+                 <li><a href="index.html" class="navbar-item transition-all">Home</a></li>
+                 <li><a href="services.html" class="navbar-item transition-all">Services</a></li>
+                 <li><a href="about.html" class="navbar-item transition-all">About Us</a></li>
+                 <li><a href="contact.html" class="navbar-item transition-all">Contact</a></li>
+                 <li class="mr-12"><a href="testimonials.html" class="navbar-item transition-all">Testimonials</a></li>
+             </ul>
+             <div class="md:hidden flex items-center">
+                 <button id="hamburger" class="text-white focus:outline-none">
+                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
+                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                     </svg>
+                 </button>
+             </div>
+         </nav>
+     </header>
+ 
+     <div id="mobileMenu">
+         <div class="menu-content">
+             <button id="closeMenu" class="text-white absolute top-4 right-4">
+                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
+                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                 </svg>
+             </button>
+             <a href="index.html">Home</a>
+             <a href="services.html">Services</a>
+             <a href="about.html">About Us</a>
+             <a href="contact.html">Contact</a>
+             <a href="testimonials.html">Testimonials</a>
+         </div>
+     </div>
+ 
+     <section id="contact" class="container mx-auto py-32 px-6 fade-in">
+         <h2 class="text-4xl font-semibold text-center text-black mb-8 animate__animated animate__fadeInUp">Contact Us</h2>
+         <form id="contact-form" method="POST" class="space-y-6 max-w-lg mx-auto bg-white p-8 rounded-lg shadow-lg">
+             <div class="w-full animate__animated animate__fadeInUp">
+                 <label for="user-type" class="block text-lg font-semibold">Select Your Type</label>
+                 <select id="user-type" name="user-type" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500">
+                     <option value="single-user">Single User</option>
+                     <option value="company">Company</option>
+                     <option value="association">Association</option>
+                 </select>
+             </div>
+ 
+             <input type="text" id="company-name" name="company-name" placeholder="Company Name (if applicable)" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 animate__animated animate__fadeInUp">
+ 
+             <input type="text" id="name" name="name" placeholder="Your Name" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 animate__animated animate__fadeInUp">
+ 
+             <input type="email" id="email" name="email" placeholder="Your Email" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 animate__animated animate__fadeInUp">
+ 
+             <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 animate__animated animate__fadeInUp">
+ 
+             <textarea id="message" name="message" placeholder="Your Message" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 animate__animated animate__fadeInUp"></textarea>
+ 
+             <input type="text" id="project-type" name="project-type" placeholder="Project Type (e.g., Website, App, etc.)" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 animate__animated animate__fadeInUp" required>
+ 
+             <input type="number" id="budget" name="budget" placeholder="Estimated Budget" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 animate__animated animate__fadeInUp" required>
+ 
+             <input type="text" id="timeline" name="timeline" placeholder="Project Timeline (e.g., 3 months, 6 weeks)" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500">
+ 
+             <button type="button" onclick="sendEmail()" class="w-full bg-yellow-500 text-gray-900 py-2 px-6 rounded-full text-lg mt-6 hover:bg-yellow-400 transition-all transform hover:scale-105">
+                 Send Message
+             </button>
+         </form>
+ 
+         <p class="text-center mt-8 text-lg text-black">Or contact us directly: <a href="mailto:anshjamwal10102003@gmail.com" class="text-yellow-400 hover:text-yellow-500">anshjamwal10102003@gmail.com</a> or call <a href="tel:+917006377796" class="text-yellow-400 hover:text-yellow-500">7006377796</a></p>
+     </section>
+ 
+     <footer class="bg-gray-800 text-white text-center py-4 mt-32 fixed bottom-0 w-full">
+         <p class="text-white">&copy; 2025 SniperCoders. All rights reserved.</p>
+     </footer>
+ 
+     <script>
+         // Initialize EmailJS
+         emailjs.init("user_7TY82EJhHsbm83F4VpZGH");
+ 
+         function sendEmail() {
+             const form = document.getElementById("contact-form");
+ 
+             if (form) {
+                 const formData = new FormData(form);
+ 
+                 emailjs.sendForm("service_82pq3lx", "template_11nhp9h", form)
+                     .then(function(response) {
+                         console.log("Success:", response);
+                         alert("Your message has been sent successfully!");
+                         form.reset();
+                     }, function(error) {
+                         console.error("Error:", error);
+                         alert("Oops! Something went wrong. Please try again.");
+                     });
+             } else {
+                 alert("Form not found!");
+             }
+         }
+ 
+         const hamburger = document.getElementById("hamburger");
+         const mobileMenu = document.getElementById("mobileMenu");
+         const closeMenu = document.getElementById("closeMenu");
+ 
+         // Open mobile menu when hamburger is clicked
+         hamburger.addEventListener("click", () => {
+             mobileMenu.style.display = "block";
+         });
+ 
+         // Close mobile menu when close button is clicked
+         closeMenu.addEventListener("click", () => {
+             mobileMenu.style.display = "none";
+         });
+ 
+         // Close mobile menu if clicked outside
+         window.addEventListener("click", (event) => {
+             if (!event.target.closest("#mobileMenu") && !event.target.closest("#hamburger")) {
+                 mobileMenu.style.display = "none";
+             }
+         });
+     </script>
+ 
+ </body>
+ 
+ </html>
+ 

@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>SniperCoders - Software Services</title>
+        <link rel="icon" href="images/logo.ico" type="image/x-icon">
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+        <script>
+            AOS.init();
+        </script>
+    <style>
+        .transition-all {
+            transition: all 0.3s ease;
+        }
+
+
+        .navbar-item {
+            text-decoration: none;
+            color: white;
+            padding: 0.8rem;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+        }
+
+        .navbar-item:hover {
+            color: #facc15;
+            transform: translateY(-3px);
+        }
+
+        .navbar-item:active {
+            color: #ea580c;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #2b6cb0, #4c51bf);
+            color: white;
+            animation: pulseBackground 3s infinite alternate;
+            padding-bottom: 50px;
+        }
+
+        @keyframes pulseBackground {
+            0% {
+                background: linear-gradient(135deg, #2b6cb0, #4c51bf);
+            }
+
+            100% {
+                background: linear-gradient(135deg, #4c51bf, #2b6cb0);
+            }
+        }
+
+        .cta-button {
+            background-color: #facc15;
+            color: #1a202c;
+            border-radius: 9999px;
+            padding: 16px 32px;
+            font-size: 18px;
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #fbbf24;
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+
+        .fade-in {
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .fade-in-visible {
+            opacity: 1;
+        }
+
+
+        .letter {
+            display: inline-block;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.5s forwards;
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+
+        .scale-text {
+            animation: scaleUpDown 4s infinite ease-in-out;
+        }
+
+        @keyframes scaleUpDown {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.05);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+
+        .special-content {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s, transform 0.8s ease-out;
+        }
+
+        .special-content-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        ] .animated-text span {
+            display: inline-block;
+            opacity: 0;
+            animation: fadeIn 0.3s ease-in forwards;
+            margin-right: 0.5rem;
+            margin-bottom: 0.3rem;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+
+        .move-left-to-right {
+            animation: moveAndChangeColor 4s infinite ease-in-out;
+        }
+
+        @keyframes moveAndChangeColor {
+            0% {
+                background-color: #ffffff;
+                transform: translateX(0);
+            }
+
+            25% {
+                background-color: #ffcccc;
+                transform: translateX(10px);
+            }
+
+            50% {
+                background-color: #ccffcc;
+                transform: translateX(20px);
+            }
+
+            75% {
+                background-color: #ccccff;
+                transform: translateX(30px);
+            }
+
+            100% {
+                background-color: #ffffff;
+                transform: translateX(40px);
+            }
+        }
+
+
+        .special-content:hover {
+            background-color: #fbbf24;
+            transform: scale(1.05);
+        }
+
+
+        .image-slider {
+            display: flex;
+            overflow: hidden;
+            width: 100%;
+            height: 250px;
+            position: relative;
+            margin-bottom: 40px;
+        }
+
+        .image-slider img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            flex-shrink: 0;
+            animation: slide 15s linear infinite;
+        }
+
+        @keyframes slide {
+            0% {
+                transform: translateX(0);
+            }
+
+            25% {
+                transform: translateX(-100%);
+            }
+
+            50% {
+                transform: translateX(-200%);
+            }
+
+            75% {
+                transform: translateX(-300%);
+            }
+
+            100% {
+                transform: translateX(-400%);
+            }
+        }
+
+
+        .service-card {
+            background-color: #fff;
+            color: #333;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            transform: translateY(20px);
+            transition: transform 0.4s ease, opacity 0.4s ease, background-color 0.4s ease;
+            animation: fadeIn 0.5s forwards;
+        }
+
+        .service-card-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+
+        .service-card:hover {
+            background-color: #fcd34d;
+            transform: translateY(-5px);
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+        }
+
+
+        section {
+            padding-top: 4rem;
+            padding-bottom: 6rem;
+        }
+
+        .wavy-animation {
+            animation: wavyMotion 2s ease-in-out infinite;
+        }
+
+        @keyframes wavyMotion {
+            0% {
+                transform: translateY(0);
+            }
+
+            25% {
+                transform: translateY(-10px);
+            }
+
+            50% {
+                transform: translateY(10px);
+            }
+
+            75% {
+                transform: translateY(-10px);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+
+        @keyframes vibrantBgChange {
+            0% {
+                background: linear-gradient(45deg, #ff7e5f, #feb47b, #fbbf24);
+            }
+
+            25% {
+                background: linear-gradient(45deg, #ffcccb, #ccffcc, #cce7ff);
+            }
+
+            50% {
+                background: linear-gradient(45deg, #ff7e5f, #feb47b, #fbbf24);
+            }
+
+            75% {
+                background: linear-gradient(45deg, #ffcccb, #ccffcc, #cce7ff);
+            }
+
+            100% {
+                background: linear-gradient(45deg, #ff7e5f, #feb47b, #fbbf24);
+            }
+        }
+
+        .service-card {
+            animation: vibrantBgChange 6s ease infinite;
+        }
+
+        .service-card:hover {
+            animation: vibrantBgChange 2s ease infinite;
+        }
+
+
+        @keyframes bounceIn {
+            0% {
+                transform: scale(0);
+                opacity: 0;
+            }
+
+            50% {
+                transform: scale(1.2);
+                opacity: 1;
+            }
+
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .letter {
+            animation: bounceIn 1s ease-in-out forwards;
+            display: inline-block;
+        }
+
+        .letter:hover {
+            animation: bounceIn 0.5s ease-in-out forwards;
+            color: #ff6347;
+        }
+
+
+        .slider-height-increased {
+            height: 500px;
+            overflow: hidden;
+        }
+
+        .image-slider img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        ] .logo-container {
+            display: flex;
+            align-items: center;
+            background-color: #2d3748;
+            padding: 8px;
+            border-radius: 50%;
+        }
+
+        .logo {
+            width: 40px;
+            height: auto;
+            background-color: #2d3748;
+            padding: 10px;
+            border-radius: 50%;
+        }
+
+        .navbar-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: white;
+        }
+
+
+        .navbar-item {
+            text-decoration: none;
+            color: white;
+            transition: color 0.3s ease;
+        }
+
+        .navbar-item:hover {
+            color: #fbbf24;
+        }
+
+        footer {
+            background-color: #2d2d2d;
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+    </style>
+
+</head>
+
+<body class="font-sans bg-gray-100">
+
+    <header class="bg-gray-800 text-white py-4 fixed top-0 w-full z-10">
+        <nav class="container mx-auto flex justify-between items-center">
+
+            <div class="logo-container flex items-center bg-gray-800 p-2 rounded-full">
+                <img src="images/logo.png" alt="Logo" class="logo w-12 h-auto mr-2 bg-gray-800 p-2 rounded-full">
+                <span class="navbar-title text-xl font-bold">SniperCoders</span>
+            </div>
+
+            <ul class="flex space-x-6">
+                <li><a href="index.html" class="navbar-item transition-all">Home</a></li>
+                <li><a href="services.html" class="navbar-item transition-all">Services</a></li>
+                <li><a href="about.html" class="navbar-item transition-all">About Us</a></li>
+                <li><a href="contact.html" class="navbar-item transition-all">Contact</a></li>
+                <li><a href="testimonials.html" class="navbar-item transition-all">Testimonials</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+
+
+    <header class="bg-gray-800 text-white py-4 fixed top-0 w-full z-10">
+        <nav class="container mx-auto flex justify-between items-center">
+
+           
+            <div class="logo-container flex items-center bg-gray-800 p-2 rounded-full">
+                <img src="images/logo.png" alt="Logo" class="logo w-12 h-auto mr-2 bg-gray-800 p-2 rounded-full">
+                <span class="navbar-title text-xl font-bold">SniperCoders</span>
+            </div>
+
+          
+            <div class="block lg:hidden">
+                <button id="menu-toggle" class="text-white focus:outline-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                        class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+
+           
+            <ul id="navbar" class="flex space-x-6 hidden lg:flex">
+                <li><a href="index.html" class="navbar-item transition-all">Home</a></li>
+                <li><a href="services.html" class="navbar-item transition-all">Services</a></li>
+                <li><a href="about.html" class="navbar-item transition-all">About Us</a></li>
+                <li><a href="contact.html" class="navbar-item transition-all">Contact</a></li>
+                <li><a href="testimonials.html" class="navbar-item transition-all">Testimonials</a></li>
+            </ul>
+
+          
+            <ul id="mobile-menu"
+                class="lg:hidden fixed inset-0 bg-gray-800 bg-opacity-80 flex justify-center items-center flex-col space-y-6 px-6 transform translate-y-full transition-all duration-300 ease-in-out">
+                <li><a href="index.html" class="navbar-item transition-all text-white text-xl">Home</a></li>
+                <li><a href="services.html" class="navbar-item transition-all text-white text-xl">Services</a></li>
+                <li><a href="about.html" class="navbar-item transition-all text-white text-xl">About Us</a></li>
+                <li><a href="contact.html" class="navbar-item transition-all text-white text-xl">Contact</a></li>
+                <li><a href="testimonials.html" class="navbar-item transition-all text-white text-xl">Testimonials</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+
+<br>
+<br>
+
+
+    
+
+    <section id="home" class="hero text-center py-32 flex flex-col justify-center items-center space-y-4 pt-24">
+    
+        <h1 class="text-xl sm:text-sm md:hidden font-bold scale-text whitespace-nowrap">
+            <span class="letter text-black animate__animated animate__fadeIn animate__delay-0.1s">W</span>
+            <span class="letter text-white animate__animated animate__fadeIn animate__delay-0.2s">e</span>
+            <span class="letter text-black animate__animated animate__fadeIn animate__delay-0.3s">l</span>
+            <span class="letter text-white animate__animated animate__fadeIn animate__delay-0.4s">c</span>
+            <span class="letter text-black animate__animated animate__fadeIn animate__delay-0.5s">o</span>
+            <span class="letter text-white animate__animated animate__fadeIn animate__delay-0.6s">m</span>
+            <span class="letter text-black animate__animated animate__fadeIn animate__delay-0.7s">e</span>
+            <span class="letter text-white animate__animated animate__fadeIn animate__delay-0.8s"> </span>
+            <span class="letter text-black animate__animated animate__fadeIn animate__delay-0.9s">t</span>
+            <span class="letter text-white animate__animated animate__fadeIn animate__delay-1s">o</span>
+            <span class="letter text-black animate__animated animate__fadeIn animate__delay-1.1s"> </span>
+            <span class="letter text-white animate__animated animate__fadeIn animate__delay-1.2s">S</span>
+            <span class="letter text-black animate__animated animate__fadeIn animate__delay-1.3s">n</span>
+            <span class="letter text-white animate__animated animate__fadeIn animate__delay-1.4s">i</span>
+            <span class="letter text-black animate__animated animate__fadeIn animate__delay-1.5s">p</span>
+            <span class="letter text-white animate__animated animate__fadeIn animate__delay-1.6s">e</span>
+            <span class="letter text-black animate__animated animate__fadeIn animate__delay-1.7s">r</span>
+            <span class="letter text-white animate__animated animate__fadeIn animate__delay-1.8s">C</span>
+            <span class="letter text-black animate__animated animate__fadeIn animate__delay-1.9s">o</span>
+            <span class="letter text-white animate__animated animate__fadeIn animate__delay-2s">d</span>
+            <span class="letter text-black animate__animated animate__fadeIn animate__delay-2.1s">e</span>
+            <span class="letter text-white animate__animated animate__fadeIn animate__delay-2.2s">r</span>
+            <span class="letter text-black animate__animated animate__fadeIn animate__delay-2.3s">s</span>
+        </h1>
+    
+        <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold scale-text whitespace-nowrap hidden md:block">
+            <span class="letter text-black animate__animated animate__fadeIn animate__delay-0.1s">W</span>
+            <span class="letter text-white animate__animated animate__fadeIn animate__delay-0.2s">e</span>
+            <span class="letter text-black animate__animated animate__fadeIn animate__delay-0.3s">l</span>
+            <span class="letter text-white animate__animated animate__fadeIn animate__delay-0.4s">c</span>
+            <span class="letter text-black animate__animated animate__fadeIn animate__delay-0.5s">o</span>
+            <span class="letter text-white animate__animated animate__fadeIn animate__delay-0.6s">m</span>
+            <span class="letter text-black animate__animated animate__fadeIn animate__delay-0.7s">e</span>
+            <span class="letter text-white animate__animated animate__fadeIn animate__delay-0.8s"> </span>
+            <span class="letter text-black animate__animated animate__fadeIn animate__delay-0.9s">t</span>
+            <span class="letter text-white animate__animated animate__fadeIn animate__delay-1s">o</span>
+            <span class="letter text-black animate__animated animate__fadeIn animate__delay-1.1s"> </span>
+            <span class="letter text-white animate__animated animate__fadeIn animate__delay-1.2s">S</span>
+            <span class="letter text-black animate__animated animate__fadeIn animate__delay-1.3s">n</span>
+            <span class="letter text-white animate__animated animate__fadeIn animate__delay-1.4s">i</span>
+            <span class="letter text-black animate__animated animate__fadeIn animate__delay-1.5s">p</span>
+            <span class="letter text-white animate__animated animate__fadeIn animate__delay-1.6s">e</span>
+            <span class="letter text-black animate__animated animate__fadeIn animate__delay-1.7s">r</span>
+            <span class="letter text-white animate__animated animate__fadeIn animate__delay-1.8s">C</span>
+            <span class="letter text-black animate__animated animate__fadeIn animate__delay-1.9s">o</span>
+            <span class="letter text-white animate__animated animate__fadeIn animate__delay-2s">d</span>
+            <span class="letter text-black animate__animated animate__fadeIn animate__delay-2.1s">e</span>
+            <span class="letter text-white animate__animated animate__fadeIn animate__delay-2.2s">r</span>
+            <span class="letter text-black animate__animated animate__fadeIn animate__delay-2.3s">s</span>
+        </h1>
+    
+        <p class="text-lg md:text-2xl animated-text">
+            Your one-stop solution for web development, digital marketing, and <br>
+            innovative software solutions.
+        </p>
+    
+        <button class="cta-button mt-6" onclick="window.location.href='services.html'">Get Started</button>
+    </section>
+
+    
+
+
+
+    
+ 
+        <div class="image-slider mt-10 slider-height-increased">
+            <img src="images/image1.jpg" alt="Image 1">
+            <img src="images/image2.jpg" alt="Image 2">
+            <img src="images/image3.jpg" alt="Image 3">
+            <img src="images/image4.jpg" alt="Image 4">
+            <img src="images/image5.jpg" alt="Image 5">
+        </div>
+
+
+ 
+  
+
+
+
+<section class="py-16 bg-gradient-to-r from-teal-400 via-cyan-500 to-blue-600 text-white transition-all duration-500 hover:bg-gradient-to-r hover:from-white hover:via-yellow-300 hover:to-pink-300 px-4 sm:px-8">
+    <h2 class="text-4xl font-semibold text-center mb-4 animate-up-down-zoom-color">Our Specialization in Web Development</h2>
+    <p class="text-xl text-center mb-8 animate__animated animate__fadeIn animate__delay-1.5s">We specialize in building scalable, responsive, and high-performance websites tailored to your business needs.</p>
+
+    <div class="flex flex-wrap justify-center space-x-6 mx-auto gap-6">
+        <div class="service-card service-card-visible w-full sm:w-80 px-6 py-4 transition-transform duration-500 transform hover:scale-105 hover:text-gray-900 hover:shadow-lg animate__animated animate__fadeIn animate__delay-0.5s wavy-animation bg-gradient-to-r from-blue-500 via-purple-600 to-pink-500 hover:bg-gradient-to-r hover:from-teal-400 hover:via-cyan-500 hover:to-blue-600 animate-up-down px-4 sm:px-8">
+            <h3 class="text-xl font-semibold mb-2">Custom Web Solutions</h3>
+            <p>We design and develop websites tailored to your specific requirements, using cutting-edge technologies and frameworks to ensure scalability and performance.</p>
+        </div>
+
+        <div class="service-card service-card-visible w-full sm:w-80 px-6 py-4 transition-transform duration-500 transform hover:scale-105 hover:text-gray-900 hover:shadow-lg animate__animated animate__fadeIn animate__delay-1s wavy-animation bg-gradient-to-r from-green-500 via-yellow-500 to-red-500 hover:bg-gradient-to-r hover:from-teal-400 hover:via-cyan-500 hover:to-blue-600 animate-up-down px-4 sm:px-8">
+            <h3 class="text-xl font-semibold mb-2">Mobile-Friendly Design</h3>
+            <p>Our websites are optimized for mobile devices, ensuring seamless user experiences across smartphones, tablets, and desktops.</p>
+        </div>
+
+        <div class="service-card service-card-visible w-full sm:w-80 px-6 py-4 transition-transform duration-500 transform hover:scale-105 hover:text-gray-900 hover:shadow-lg animate__animated animate__fadeIn animate__delay-1.5s wavy-animation bg-gradient-to-r from-pink-500 via-yellow-500 to-teal-500 hover:bg-gradient-to-r hover:from-teal-400 hover:via-cyan-500 hover:to-blue-600 animate-up-down px-4 sm:px-8">
+            <h3 class="text-xl font-semibold mb-2">E-commerce Integration</h3>
+            <p>We offer robust e-commerce solutions to help you sell online with secure payment gateways, efficient inventory management, and easy product display.</p>
+        </div>
+    </div>
+</section>
+
+
+
+
+    <section class="cta-section text-center mb-24">
+        <h3
+            class="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500">
+            Ready to Take Your Business to the Next Level?</h3>
+        <br>
+
+        <p class="text-lg text-black animate-pulse">Take the first step towards growth and innovation today. Our team is
+            here to help you achieve your goals with customized solutions.</p>
+
+        <br>
+        <a href="services.html"
+            class="bg-gradient-to-r from-orange-400 to-yellow-500 text-white py-3 px-6 rounded-full text-lg transition-all duration-300 hover:from-yellow-500 hover:to-orange-600">
+            Get Your Custom Solution Now
+        </a>
+    </section>
+
+<br>
+
+    <footer class="text-center py-8 fixed bg-gray-800 text-white">
+        <p>&copy; 2025 SniperCoders - All Rights Reserved</p>
+    </footer>
+
+
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function () {
+            const menu = document.getElementById('mobile-menu');
+
+          
+            if (menu.classList.contains('translate-y-full')) {
+                menu.classList.remove('translate-y-full');
+            } else {
+             
+                menu.classList.add('translate-y-full');
+            }
+        });
+    </script>
+
+
+</body>
+
+</html> 

@@ -1,0 +1,212 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>About Us - SniperCoders</title>
+    <link rel="icon" href="images/logo.ico" type="image/x-icon">
+    <link rel="icon" href="images/logo.ico" type="image/x-icon">
+    <link rel="icon" href="images/logo.ico" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+
+<style>
+    /* General Styles */
+    .navbar-item {
+        text-decoration: none;
+        color: white;
+        padding: 0.8rem;
+        text-transform: uppercase;
+        transition: all 0.3s ease;
+    }
+
+    .navbar-item:hover {
+        color: #facc15;
+        transform: translateY(-3px);
+    }
+
+    .navbar-item:active {
+        color: #ea580c;
+    }
+
+    /* Transparent Navbar for Mobile */
+    @media (max-width: 768px) {
+        .navbar-menu {
+            display: none;
+            flex-direction: column;
+            width: 100%;
+            background-color: transparent;
+            position: absolute;
+            top: 60px;
+            left: 0;
+            padding: 10px 0;
+            z-index: 1;
+            text-align: center;
+        }
+
+        .navbar-menu.active {
+            display: flex;
+            background-color: transparent; /* Set transparent background */
+            box-shadow: none; /* Remove any shadow */
+        }
+
+        .navbar-item {
+            padding: 10px;
+            color: white; /* Ensure text is visible */
+            text-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Optional: Add subtle text shadow for contrast */
+        }
+
+        .navbar-toggle {
+            display: block;
+            cursor: pointer;
+            font-size: 30px;
+            color: white;
+        }
+
+        .overlay {
+            background: rgba(0, 0, 0, 0.5); /* Optional: dim the rest of the screen */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            display: none;
+        }
+
+        .overlay.active {
+            display: block;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .cta-button {
+            padding: 12px 24px;
+        }
+    }
+</style>
+
+</head>
+<body class="font-sans bg-gradient-to-r from-blue-500 via-purple-600 to-pink-500 pb-24">
+    <!-- <header class="bg-gray-800 text-white py-4 fixed top-0 w-full z-10">
+        <nav class="container mx-auto flex justify-between items-center">
+            <div class="logo-container flex items-center bg-gray-800 p-2 rounded-full">
+                <img src="images/logo.png" alt="Logo" class="logo w-12 h-auto mr-2 bg-gray-800 p-2 rounded-full">
+                <span class="navbar-title text-xl font-bold">SniperCoders</span>
+            </div>
+
+            <ul class="flex space-x-6 navbar-menu hidden sm:flex">
+                <li><a href="index.html" class="navbar-item transition-all">Home</a></li>
+                <li><a href="services.html" class="navbar-item transition-all">Services</a></li>
+                <li><a href="about.html" class="navbar-item transition-all">About Us</a></li>
+                <li><a href="contact.html" class="navbar-item transition-all">Contact</a></li>
+                <li><a href="testimonials.html" class="navbar-item transition-all">Testimonials</a></li>
+            </ul>
+            <div class="navbar-toggle sm:hidden text-white" onclick="toggleMenu()">
+                &#9776;
+            </div>
+        </nav>
+    </header> -->
+
+
+
+    <header class="bg-gray-800 text-white py-4 fixed top-0 w-full z-10">
+        <nav class="container mx-auto flex justify-between items-center">
+            <div class="logo-container flex items-center bg-gray-800 p-2 rounded-full">
+                <img src="images/logo.png" alt="Logo" class="logo w-12 h-auto mr-2 bg-gray-800 p-2 rounded-full">
+                <span class="navbar-title text-xl font-bold">SniperCoders</span>
+            </div>
+
+            <!-- Hamburger Icon -->
+            <div class="navbar-toggle sm:hidden text-white" onclick="toggleMenu()">
+                &#9776;
+            </div>
+
+            <!-- Mobile Menu -->
+            <ul class="navbar-menu">
+                <li><a href="index.html" class="navbar-item">Home</a></li>
+                <li><a href="services.html" class="navbar-item">Services</a></li>
+                <li><a href="about.html" class="navbar-item">About Us</a></li>
+                <li><a href="contact.html" class="navbar-item">Contact</a></li>
+                <li><a href="testimonials.html" class="navbar-item">Testimonials</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+
+
+    <section id="about" class="container mx-auto py-32 px-6 animate__animated animate__fadeIn animate__delay-1s">
+        <h2 class="text-5xl font-extrabold text-center text-white mb-8 animate__animated animate__fadeInUp">
+            About SniperCoders
+        </h2>
+        <p class="text-lg md:text-2xl leading-relaxed text-center max-w-4xl mx-auto text-white opacity-80 mb-6 animate__animated animate__fadeInUp">
+            Welcome to SniperCoders! We are a passionate and innovative team of developers dedicated to delivering cutting-edge solutions to businesses worldwide. We specialize in creating stunning, highly functional websites that drive business success.
+        </p>
+        <p class="text-lg md:text-2xl leading-relaxed text-center max-w-4xl mx-auto text-white opacity-80 mb-6 animate__animated animate__fadeInUp">
+            At SniperCoders, we understand that every business is unique. That’s why we focus on personalized web development that ensures your online presence stands out from the competition. Whether you're a startup or a growing business, our team is here to provide tailored solutions that suit your needs.
+        </p>
+        <div class="bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 p-8 rounded-lg shadow-xl text-white text-center animate__animated animate__fadeInUp mb-12 vibrant-bg">
+            <h3 class="text-4xl font-bold mb-6">Our Expertise: Website Development</h3>
+            <p class="text-lg mb-4">We specialize in creating modern, responsive websites that not only look great but are also optimized for performance, speed, and user experience. Our expert developers use the latest technologies to bring your vision to life.</p>
+            <p class="text-lg mb-6">From simple landing pages to complex e-commerce platforms, we ensure every website is crafted with precision and attention to detail. Our mission is to empower your business online, helping you engage with customers, build trust, and drive growth.</p>
+            <button id="learnMoreBtn" class="bg-yellow-500 text-gray-900 py-2 px-6 rounded-full text-lg mt-4 hover:bg-yellow-400 transition-all transform hover:scale-105">
+                Learn More About Web Development
+            </button>
+        </div>
+
+        <div id="extraContent" class="hidden animate__animated animate__fadeInUp bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 p-8 rounded-lg shadow-xl text-white text-center mt-8">
+            <h3 class="text-3xl font-bold mb-4 animate__animated animate__fadeInLeft">Why Choose Our Web Development Services?</h3>
+            <p class="text-lg mb-4 animate__animated animate__fadeInLeft">We don't just build websites; we build digital experiences that resonate with your audience. Our services are designed to help you stand out online and grow your business.</p>
+            <h4 class="text-2xl font-semibold mb-4 animate__animated animate__fadeInLeft delay-1s">1. Cutting-Edge Technologies</h4>
+            <p class="text-lg mb-6 animate__animated animate__fadeInLeft delay-1.5s">We use modern frameworks like React, Vue.js, and backend solutions like Node.js and Python to ensure your website is fast, secure, and scalable.</p>
+            <h4 class="text-2xl font-semibold mb-4 animate__animated animate__fadeInLeft delay-2s">2. Performance Optimization</h4>
+            <p class="text-lg mb-6 animate__animated animate__fadeInLeft delay-2.5s">A fast-loading website is critical for user experience. We optimize images, reduce loading times, and ensure your site runs smoothly across all devices.</p>
+            <h4 class="text-2xl font-semibold mb-4 animate__animated animate__fadeInLeft delay-3s">3. SEO & Growth</h4>
+            <p class="text-lg mb-6 animate__animated animate__fadeInLeft delay-3.5s">We follow SEO best practices from the start, helping your site rank higher and attract more organic traffic. Our goal is to set you up for long-term success.</p>
+            <h4 class="text-2xl font-semibold mb-4 animate__animated animate__fadeInLeft delay-4s">4. Mobile-First Design</h4>
+            <p class="text-lg mb-6 animate__animated animate__fadeInLeft delay-4.5s">We prioritize mobile design, ensuring your website provides an amazing user experience no matter the device or screen size.</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-12 animate__animated animate__fadeInUp">
+            <div class="text-center p-6 bg-white rounded-lg shadow-xl hover:scale-105 transform transition-all duration-300 ease-in-out hover:bg-gradient-to-r hover:from-blue-400 hover:to-blue-600 hover:text-white animate__animated animate__fadeInLeft">
+                <h4 class="text-3xl font-bold mb-4 text-blue-500 hover:text-white transition-all duration-300">Innovation</h4>
+                <p class="text-lg text-gray-700 hover:text-gray-100 transition-all duration-300">We constantly innovate and stay updated with the latest trends in web development to deliver the best results for your business.</p>
+            </div>
+            <div class="text-center p-6 bg-white rounded-lg shadow-xl hover:scale-105 transform transition-all duration-300 ease-in-out hover:bg-gradient-to-r hover:from-green-400 hover:to-green-600 hover:text-white animate__animated animate__fadeInLeft animate__delay-1s">
+                <h4 class="text-3xl font-bold mb-4 text-green-500 hover:text-white transition-all duration-300">Collaboration</h4>
+                <p class="text-lg text-gray-700 hover:text-gray-100 transition-all duration-300">We believe in a collaborative approach to building your online presence, working closely with you every step of the way.</p>
+            </div>
+            <div class="text-center p-6 bg-white rounded-lg shadow-xl hover:scale-105 transform transition-all duration-300 ease-in-out hover:bg-gradient-to-r hover:from-purple-400 hover:to-purple-600 hover:text-white animate__animated animate__fadeInLeft animate__delay-2s">
+                <h4 class="text-3xl font-bold mb-4 text-purple-500 hover:text-white transition-all duration-300">Customer-Centric</h4>
+                <p class="text-lg text-gray-700 hover:text-gray-100 transition-all duration-300">Our focus is on building websites that meet your goals, engage your audience, and help your business grow.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-800 text-white py-6 fixed bottom-0 w-full">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2025 SniperCoders. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const learnMoreBtn = document.getElementById('learnMoreBtn');
+        const extraContent = document.getElementById('extraContent');
+
+        learnMoreBtn.addEventListener('click', () => {
+            extraContent.classList.toggle('hidden');
+        });
+
+        function toggleMenu() {
+            const navbarMenu = document.querySelector('.navbar-menu');
+            navbarMenu.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
