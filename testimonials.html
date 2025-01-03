@@ -1,4 +1,4 @@
-
+<!-- 
 
 <!DOCTYPE html>
 <html lang="en">
@@ -288,6 +288,311 @@
             <p class="text-lg italic mb-4">"Our business has grown exponentially thanks to SniperCoders' innovative solutions. They understand our needs and always deliver above and beyond!"</p>
             <p class="font-semibold text-xl">Alex Johnson</p>
             <p class="text-gray-500">CTO, Tech Innovators</p>
+        </div>
+    </div>
+</section>
+
+<footer class="text-white text-center py-4">
+    <p>&copy; 2025 SniperCoders. All rights reserved.</p>
+</footer>
+
+<script>
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    hamburger.addEventListener('click', () => {
+        mobileMenu.classList.toggle('active');
+    });
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ -->
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Testimonials - SniperCoders</title>
+    <link rel="icon" href="images/logo.ico" type="image/x-icon">
+    <link rel="icon" href="images/logo.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="images/logo.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="images/logo.ico" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            AOS.init();
+        });
+    </script>
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: black;
+            color: white;
+            margin-bottom: 100px;
+        }
+
+        .navbar-item {
+            text-decoration: none;
+            color: white;
+            padding: 0.8rem;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+        }
+
+        .navbar-item:hover {
+            color: #facc15;
+            transform: translateY(-3px);
+        }
+
+        .navbar-item:active {
+            color: #ea580c;
+        }
+
+        .section {
+            padding: 80px 0;
+            background-color: black;
+            color: white;
+        }
+
+        .testimonial-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+            background-color: rgba(255, 255, 255, 0.8);
+            color: black;
+        }
+
+        .testimonial-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            background-color: rgba(255, 255, 255, 1);
+        }
+
+        footer {
+            background-color: #1a1a1a;
+            text-align: center;
+            padding: 1rem;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            z-index: 10;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 1rem;
+        }
+
+        .testimonial-card p {
+            margin-bottom: 1rem;
+        }
+
+        @keyframes text-color-change {
+            0% {
+                color: #facc15;
+            }
+            25% {
+                color: #f472b6;
+            }
+            50% {
+                color: #60a5fa;
+            }
+            75% {
+                color: #34d399;
+            }
+            100% {
+                color: #facc15;
+            }
+        }
+
+        .animate-text-color {
+            animation: text-color-change 5s ease infinite;
+        }
+
+        .section h1:hover {
+            transform: scale(1.1);
+        }
+
+        .section p:hover {
+            transform: scale(1.05);
+        }
+
+        .mobile-menu {
+            display: none;
+            position: absolute;
+            top: 60px;
+            left: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            z-index: 20;
+            transition: all 0.3s ease-in-out;
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .mobile-menu.active {
+            display: block;
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .mobile-menu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .mobile-menu ul li {
+            text-align: center;
+            border-bottom: 1px solid #fff;
+        }
+
+        .mobile-menu ul li a {
+            display: block;
+            padding: 1rem;
+            text-decoration: none;
+            color: white;
+        }
+
+        .mobile-menu ul li a:hover {
+            background-color: #444;
+        }
+
+        @media (min-width: 768px) {
+            .desktop-menu {
+                display: flex;
+            }
+
+            .mobile-menu {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header class="bg-gray-800 text-white py-4 fixed top-0 w-full z-10">
+    <nav class="container mx-auto flex justify-between items-center">
+        <div class="logo-container flex items-center bg-gray-800 p-2 rounded-full">
+            <img src="images/logo.png" alt="Logo" class="logo w-12 h-auto mr-2 bg-gray-800 p-2 rounded-full">
+            <span class="navbar-title text-xl font-bold">SniperCoders</span>
+        </div>
+
+        <ul class="desktop-menu hidden md:flex space-x-6">
+            <li><a href="index.html" class="navbar-item">Home</a></li>
+            <li><a href="services.html" class="navbar-item">Services</a></li>
+            <li><a href="about.html" class="navbar-item">About Us</a></li>
+            <li><a href="contact.html" class="navbar-item">Contact</a></li>
+            <li><a href="testimonials.html" class="navbar-item">Testimonials</a></li>
+        </ul>
+
+        <div class="md:hidden flex items-center">
+            <button id="hamburger" class="text-white focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+    </nav>
+</header>
+
+<div id="mobile-menu" class="mobile-menu">
+    <ul>
+        <li><a href="index.html" class="navbar-item">Home</a></li>
+        <li><a href="services.html" class="navbar-item">Services</a></li>
+        <li><a href="about.html" class="navbar-item">About Us</a></li>
+        <li><a href="contact.html" class="navbar-item">Contact</a></li>
+        <li><a href="testimonials.html" class="navbar-item">Testimonials</a></li>
+    </ul>
+</div>
+<br>
+<section class="section text-white text-center relative overflow-hidden">
+    <h1 class="text-4xl md:text-6xl font-bold mb-4 transition-all duration-500 hover:scale-105 transform animate-text-color">What Our Clients Say</h1>
+    <p class="text-lg md:text-2xl mb-6 transition-all duration-500 hover:scale-105 transform animate-text-color">We take pride in providing exceptional solutions and support. Here's what our clients have to say about working with SniperCoders.</p>
+</section>
+
+<section class="section container mx-auto py-16 px-6">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
+        <div class="testimonial-card bg-gradient-to-r from-yellow-400 to-red-500 p-8 rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="100">
+            <p class="text-lg italic mb-4">"SniperCoders helped us bring our vision to life with a flawless website. Their team was responsive, professional, and a true partner in our success!"</p>
+            <p class="font-semibold text-xl">Digamber</p>
+            <p class="text-gray-500">CEO, Example Corp</p>
+            <p class="text-gray-500">Phone: 6006329552</p>
+        </div>
+        <div class="testimonial-card bg-gradient-to-r from-green-400 to-blue-500 p-8 rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="200">
+            <p class="text-lg italic mb-4">"The SniperCoders team not only delivered outstanding digital marketing strategies but also provided expert guidance throughout the process. Highly recommend!"</p>
+            <p class="font-semibold text-xl">Vikram</p>
+            <p class="text-gray-500">Founder, Startup Co.</p>
+            <p class="text-gray-500">Phone: 8492988024</p>
+        </div>
+        <div class="testimonial-card bg-gradient-to-r from-pink-400 to-indigo-500 p-8 rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="300">
+            <p class="text-lg italic mb-4">"Our business has grown exponentially thanks to SniperCoders' innovative solutions. They understand our needs and always deliver above and beyond!"</p>
+            <p class="font-semibold text-xl">Danish</p>
+            <p class="text-gray-500">CTO, Tech Innovators</p>
+            <p class="text-gray-500">Phone: 7006563635</p>
+        </div>
+    </div>
+</section>
+
+<section class="section container mx-auto py-16 px-6">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
+        <div class="testimonial-card bg-gradient-to-r from-yellow-400 to-red-500 p-8 rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="100">
+            <p class="text-lg italic mb-4">"SniperCoders helped us bring our vision to life with a flawless website. Their team was responsive, professional, and a true partner in our success!"</p>
+            <p class="font-semibold text-xl">Aman</p>
+            <p class="text-gray-500">CEO, Example Corp</p>
+            <p class="text-gray-500">Phone: 9797185673</p>
+        </div>
+        <div class="testimonial-card bg-gradient-to-r from-green-400 to-blue-500 p-8 rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="200">
+            <p class="text-lg italic mb-4">"The SniperCoders team not only delivered outstanding digital marketing strategies but also provided expert guidance throughout the process. Highly recommend!"</p>
+            <p class="font-semibold text-xl">Shubam</p>
+            <p class="text-gray-500">Founder, Startup Co.</p>
+            <p class="text-gray-500">Phone: 8806765348</p>
+        </div>
+        <div class="testimonial-card bg-gradient-to-r from-pink-400 to-indigo-500 p-8 rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="300">
+            <p class="text-lg italic mb-4">"Our business has grown exponentially thanks to SniperCoders' innovative solutions. They understand our needs and always deliver above and beyond!"</p>
+            <p class="font-semibold text-xl">Sonika</p>
+            <p class="text-gray-500">CTO, Tech Innovators</p>
+            <p class="text-gray-500">Phone: 8809748903</p>
         </div>
     </div>
 </section>
